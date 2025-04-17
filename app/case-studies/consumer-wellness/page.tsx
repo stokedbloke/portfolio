@@ -8,7 +8,10 @@ export default function ConsumerWellnessCaseStudy() {
     <div className="container mx-auto px-4 py-12">
       <Button variant="ghost" asChild className="mb-8">
         <Link href="/#portfolio">
-          <ArrowLeft className="mr-2 h-4 w-4" /> Back to Portfolio
+          <span className="inline-flex items-center">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Portfolio
+          </span>
         </Link>
       </Button>
 
