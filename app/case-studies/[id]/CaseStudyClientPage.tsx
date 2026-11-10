@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import { useParams, useRouter } from "next/navigation"
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
@@ -60,7 +61,7 @@ export default function CaseStudyClientPage() {
           id: "behavioral-health",
           title: "Behavioral Health Tech Platform",
           category: "Healthcare Technology",
-          image: "/placeholder.svg?height=1200&width=2000",
+          image: "/images/case-studies/behavioral-health.jpg",
           color: "from-violet-500 to-purple-500",
           what: "I designed and deployed a platform for analyzing & visualizing emotional sentiment from user journal data over time, providing valuable insights for therapeutic interventions.",
           why: "To extend the reach and impact of somatic therapists through workflow automation and AI-powered insights, making therapy more effective and accessible.",
@@ -110,7 +111,7 @@ export default function CaseStudyClientPage() {
           id: "preventative-care",
           title: "Sleep Monitoring Business",
           category: "Digital Health",
-          image: "/placeholder.svg?height=1200&width=2000",
+          image: "/images/case-studies/preventative-care.jpg",
           color: "from-blue-500 to-cyan-500",
           what: "I built a scalable D2C Sleep Monitoring business leveraging wearable technology and health coaching to improve patient outcomes while reducing clinician burnout.",
           why: "To drive revenue growth while addressing the critical need for preventative care solutions that could scale efficiently and maintain high levels of patient engagement.",
@@ -160,7 +161,7 @@ export default function CaseStudyClientPage() {
           id: "physical-therapy",
           title: "Online Back & Neck Pain Therapy",
           category: "Telehealth",
-          image: "/placeholder.svg?height=1200&width=2000",
+          image: "/images/case-studies/physical-therapy.jpg",
           color: "from-emerald-500 to-green-500",
           what: "I scaled an online back and neck pain therapy business to profitability within 8 months, achieving 10x user growth through innovative acquisition and retention strategies.",
           why: "To provide accessible, effective treatment for back and neck pain that could reduce unnecessary surgeries and opioid dependence while creating a profitable business model.",
@@ -210,7 +211,7 @@ export default function CaseStudyClientPage() {
           id: "electronic-health-record",
           title: "Custom EMR System",
           category: "Health Informatics",
-          image: "/placeholder.svg?height=1200&width=2000",
+          image: "/images/case-studies/electronic-health-record.jpg",
           color: "from-amber-500 to-yellow-500",
           what: "I built a custom electronic medical record system specifically designed for spine care, enabling detailed tracking of patient outcomes and optimizing clinical workflows.",
           why: "Existing EMR systems couldn't support the specialized needs of our spine care practice or provide the detailed analytics required to demonstrate treatment effectiveness.",
@@ -260,7 +261,7 @@ export default function CaseStudyClientPage() {
           id: "patient-relationship",
           title: "Patient CRM Optimization",
           category: "Healthcare Operations",
-          image: "/placeholder.svg?height=1200&width=2000",
+          image: "/images/case-studies/patient-relationship.jpg",
           color: "from-red-500 to-orange-500",
           what: "I customized patient CRM software to optimize scheduling and patient relationship management, while directing company strategy, branding, and messaging.",
           why: "Efficient patient relationship management was critical to supporting business growth and ensuring optimal utilization of clinical resources.",
@@ -310,7 +311,7 @@ export default function CaseStudyClientPage() {
           id: "consumer-wellness",
           title: "WellnessFX Growth Strategy",
           category: "Consumer Health",
-          image: "/placeholder.svg?height=1200&width=2000",
+          image: "/images/case-studies/consumer-wellness.jpg",
           color: "from-pink-500 to-rose-500",
           what: "I achieved 10x user growth at WellnessFX by leveraging detailed segmentation, data-driven product positioning, and scalable marketing strategies.",
           why: "WellnessFX needed to expand beyond its initial customer base of CrossFIT athletes to reach broader wellness audiences and drive business growth.",
@@ -409,6 +410,10 @@ export default function CaseStudyClientPage() {
       <ScrollProgress />
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden h-[70vh] flex items-center">
+        {caseStudy.image && (
+          <Image src={caseStudy.image} alt="" fill priority sizes="100vw" className="object-cover opacity-30" />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/80 to-gray-950/40" />
         <div className={`absolute inset-0 bg-gradient-to-br ${caseStudy.color} opacity-10`} />
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:50px_50px]" />
         <div className="absolute inset-0 bg-noise opacity-20" />
@@ -668,8 +673,8 @@ export default function CaseStudyClientPage() {
                 >
                   <Link href="/#portfolio" className="flex items-center">
                     View All Projects
+                    <span className="absolute inset-0 translate-y-[105%] bg-white/10 transition-transform duration-300 group-hover:translate-y-0" />
                   </Link>
-                  <span className="absolute inset-0 translate-y-[105%] bg-white/10 transition-transform duration-300 group-hover:translate-y-0" />
                 </Button>
 
                 {nextCaseStudy && (

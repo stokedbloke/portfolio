@@ -86,7 +86,7 @@ export default function Home() {
       title: "Behavioral Health Tech Platform",
       description: "Redesigned EMR, clinical toolsets for overworked clinicians",
       category: "Healthcare Technology",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/images/case-studies/behavioral-health.jpg",
       color: "from-violet-500 to-purple-500",
       stats: [
         { label: "Clinician Efficiency", value: "+50%" },
@@ -99,7 +99,7 @@ export default function Home() {
       title: "Sleep Monitoring Business",
       description: "D2C platform with health coaching and wearable technology",
       category: "Digital Health",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/images/case-studies/preventative-care.jpg",
       color: "from-blue-500 to-cyan-500",
       stats: [
         { label: "Patient Engagement", value: "90%" },
@@ -112,7 +112,7 @@ export default function Home() {
       title: "Online Back & Neck Pain Therapy",
       description: "Scalable platform reducing surgeries and opioid dependence",
       category: "Telehealth",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/images/case-studies/physical-therapy.jpg",
       color: "from-emerald-500 to-green-500",
       stats: [
         { label: "Surgery Reduction", value: "90%" },
@@ -125,7 +125,7 @@ export default function Home() {
       title: "Custom EMR System",
       description: "Optimized care delivery through custom electronic medical records",
       category: "Health Informatics",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/images/case-studies/electronic-health-record.jpg",
       color: "from-amber-500 to-yellow-500",
       stats: [
         { label: "User Growth", value: "10x" },
@@ -138,7 +138,7 @@ export default function Home() {
       title: "Patient CRM Optimization",
       description: "Customized scheduling and patient relationship management",
       category: "Healthcare Operations",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/images/case-studies/patient-relationship.jpg",
       color: "from-red-500 to-orange-500",
       stats: [
         { label: "Revenue Growth", value: "2x" },
@@ -151,7 +151,7 @@ export default function Home() {
       title: "WellnessFX Growth Strategy",
       description: "Data-driven segmentation leading to successful acquisition",
       category: "Consumer Health",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/images/case-studies/consumer-wellness.jpg",
       color: "from-pink-500 to-rose-500",
       stats: [
         { label: "User Growth", value: "10x" },
