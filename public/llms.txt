@@ -1,0 +1,32 @@
+# Neil Sethi
+
+> Healthcare product lead and former engineer, based in the San Francisco Bay Area. Builds software for clinicians and patients. Currently Director of Platform Product and Partnerships at 1health (Tachin.AI).
+
+Contact: neil@percipience.live
+LinkedIn: https://www.linkedin.com/in/sethineil/
+Résumé (PDF): https://neil.percipience.live/neil-sethi-resume.pdf
+
+## Selected work
+
+- [Xolv: ABA treatment planning and reporting](https://neil.percipience.live/case-studies/behavioral-health/): Director of Product Management, Oct 2022 – Apr 2024. Led four cross-functional pods (13 engineers). Reports that took two hours now take less than an hour.
+- [1health: Developer portal and MCP Explorer](https://neil.percipience.live/case-studies/healthcare-developer-platform/): Director of Platform Product and Partnerships, Jan 2026 – present. Built the developer portal and MCP Explorer, which expose compliant healthcare APIs to engineers and AI agents.
+- [SpineZone: Online back and neck program](https://neil.percipience.live/case-studies/physical-therapy/): Co-Founder, VP of Product Management, Jan 2015 – Aug 2018. The online business broke even in eight months.
+- [Sutter Health: Wearables, coaching and sleep](https://neil.percipience.live/case-studies/preventative-care/): Director of Business Design, Product Management, Jul 2019 – Aug 2021. HealthBridge reached 90% engagement across hundreds of users.
+
+## Earlier work
+
+- [SpineZone: Custom EMR for spine care](https://neil.percipience.live/case-studies/electronic-health-record/)
+- [SpineZone: Patient CRM and scheduling](https://neil.percipience.live/case-studies/patient-relationship/)
+- [WellnessFX: Growth and analytics](https://neil.percipience.live/case-studies/consumer-wellness/): Dec 2011 – Dec 2014.
+- Qualcomm: Software Engineer, Product Manager, Jun 2004 – Dec 2009.
+
+## Independent projects, built with AI coding agents
+
+- [GiggleGauge](https://gigglegauge.com): Laughter tracker. Finds laughter in audio from a wearable and shows a daily count. Works with Omi devices. Has an MCP endpoint.
+- [VocalMirror](https://vocalmirror.io): Voice reflection app.
+- [Percipience](https://percipience.live): Interactive view of task cycles, heart-rate variability and laugh counts against the positions of the planets.
+
+## Education
+
+- MBA, INSEAD (2010)
+- Bachelor of Mathematics in Computer Science, University of Waterloo (2003)

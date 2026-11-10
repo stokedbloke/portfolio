@@ -2,17 +2,37 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Manrope } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { Analytics } from "@/components/analytics"
+import { site } from "@/lib/site"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" })
 
 export const metadata: Metadata = {
-  title: "Neil Sethi - Digital Health Product Visionary",
-  description: "Product portfolio showcasing Neil Sethi's work in digital health from 2014-2024",
-    generator: 'v0.dev'
+  metadataBase: new URL(site.url),
+  title: site.title,
+  description: site.description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: site.title,
+    description: site.description,
+    url: site.url,
+    siteName: site.name,
+    type: "website",
+  },
+}
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  url: site.url,
+  email: `mailto:${site.email}`,
+  jobTitle: "Director of Platform Product and Partnerships",
+  worksFor: { "@type": "Organization", name: "1health" },
+  sameAs: [site.linkedin, site.github],
 }
 
 export default function RootLayout({
@@ -21,17 +41,20 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark scroll-smooth">
-      <body className={`${inter.variable} ${manrope.variable} font-sans bg-gray-950 text-white`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </ThemeProvider>
+    <html lang="en">
+      <body className={`${inter.variable} ${manrope.variable} font-sans`}>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-background focus:px-3 focus:py-2"
+        >
+          Skip to content
+        </a>
+        <Header />
+        <main id="main">{children}</main>
+        <Footer />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
+        <Analytics />
       </body>
     </html>
   )
 }
-
-
-import './globals.css'
