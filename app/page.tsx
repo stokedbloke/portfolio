@@ -317,9 +317,8 @@ export default function Home() {
               >
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/30 to-violet-600/30 blur-2xl" />
                 <div className="relative h-full w-full rounded-full overflow-hidden border-2 border-blue-500/20">
-                  {/* Replace with your actual headshot from the deck */}
                   <Image
-                    src="/placeholder.svg?height=128&width=128"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neil%20LI-uLVJtMbHOWra8j9WOQ8DpAwj0pb6nD.jpeg"
                     alt="Neil Sethi"
                     fill
                     className="object-cover"
