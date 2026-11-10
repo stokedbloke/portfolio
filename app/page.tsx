@@ -42,6 +42,7 @@ export default function Home() {
 
   const heroOpacity = useTransform(smoothScrollYProgress, [0, 0.1], [1, 0])
   const heroScale = useTransform(smoothScrollYProgress, [0, 0.1], [1, 0.9])
+  const aboutImageY = useTransform(smoothScrollYProgress, [0.1, 0.35], [28, -18])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -317,9 +318,8 @@ export default function Home() {
               >
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/30 to-violet-600/30 blur-2xl" />
                 <div className="relative h-full w-full rounded-full overflow-hidden border-2 border-blue-500/20">
-                  {/* Replace with your actual headshot from the deck */}
                   <Image
-                    src="/placeholder.svg?height=128&width=128"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neil%20LI-uLVJtMbHOWra8j9WOQ8DpAwj0pb6nD.jpeg"
                     alt="Neil Sethi"
                     fill
                     className="object-cover"
@@ -392,10 +392,10 @@ export default function Home() {
 
         {/* Marquee Section */}
         <section className="py-12 bg-gray-950 overflow-hidden border-t border-b border-gray-800">
-          <ParallaxText baseVelocity={-3}>
+          <ParallaxText baseVelocity={-0.8}>
             DIGITAL HEALTH • PRODUCT LEADERSHIP • HEALTHCARE INNOVATION • USER-CENTERED DESIGN •
           </ParallaxText>
-          <ParallaxText baseVelocity={3}>
+          <ParallaxText baseVelocity={0.8}>
             DATA ANALYTICS • BEHAVIORAL HEALTH • PREVENTATIVE CARE • TELEHEALTH •
           </ParallaxText>
         </section>
@@ -415,16 +415,19 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="grid md:grid-cols-2 gap-12 items-center"
             >
-              <div className="relative aspect-square max-w-md mx-auto md:mx-0">
+              <motion.div
+                style={{ y: aboutImageY }}
+                className="relative aspect-square max-w-md mx-auto md:mx-0"
+              >
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-600/20 to-violet-600/20 blur-3xl" />
                 <div className="relative h-full w-full rounded-3xl overflow-hidden border border-gray-800">
-                  {/* Replace with a professional photo from your deck */}
                   <Image
-                    src="/placeholder.svg?height=600&width=600"
-                    alt="Neil Sethi"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250417_1449_Serene%20Vintage%20Introspection_simple_compose_01js2vn2t0fxksrk781n3az7h9.gif-gytUJ37QVbLTTwiViC83Ej8FQO040j.jpeg"
+                    alt="Neil Sethi seated in a warm vintage-style portrait"
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    loading="lazy"
                     className="object-cover"
-                    priority
                   />
                 </div>
                 <motion.div
@@ -432,12 +435,12 @@ export default function Home() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-600 to-violet-600 rounded-2xl p-4 shadow-xl"
+                  className="absolute -bottom-4 right-2 md:-bottom-6 md:-right-6 z-20 bg-gradient-to-r from-blue-600 to-violet-600 rounded-2xl p-4 shadow-xl"
                 >
-                  <p className="text-white font-bold text-xl">10+ Years</p>
+                  <p className="text-white font-bold text-xl">15+ Years</p>
                   <p className="text-white/80 text-sm">Digital Health Experience</p>
                 </motion.div>
-              </div>
+              </motion.div>
               <div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -484,7 +487,7 @@ export default function Home() {
                       </motion.div>
                     </div>
                     <p className="leading-relaxed">
-                      With over a decade of experience in digital health, I've led the development of innovative
+                      With over 15 years of experience in digital health, I've led the development of innovative
                       products that have transformed patient care, reduced costs, and improved outcomes across multiple
                       healthcare domains.
                     </p>
@@ -571,7 +574,7 @@ export default function Home() {
               className="mt-20 text-center"
             >
               <a
-                href="/resume.pdf"
+                href="https://blobs.vusercontent.net/blob/Neil%20Sethi%20%2810%29-LYAzPlwKzzJlEMmIZ5HoObanLiJvjb.pdf"
                 target="_blank"
                 className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                 rel="noreferrer"
