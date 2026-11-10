@@ -431,7 +431,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-600 to-violet-600 rounded-2xl p-4 shadow-xl"
+                  className="absolute -bottom-4 right-2 md:-bottom-6 md:-right-6 z-20 bg-gradient-to-r from-blue-600 to-violet-600 rounded-2xl p-4 shadow-xl"
                 >
                   <p className="text-white font-bold text-xl">15+ Years</p>
                   <p className="text-white/80 text-sm">Digital Health Experience</p>
