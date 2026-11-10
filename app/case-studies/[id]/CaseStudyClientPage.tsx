@@ -411,9 +411,9 @@ export default function CaseStudyClientPage() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden h-[70vh] flex items-center">
         {caseStudy.image && (
-          <Image src={caseStudy.image} alt="" fill priority sizes="100vw" className="object-cover opacity-30" />
+          <Image src={caseStudy.image} alt="" fill priority sizes="100vw" className="object-cover opacity-60" />
         )}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/80 to-gray-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-950/90 via-gray-950/50 to-gray-950/10" />
         <div className={`absolute inset-0 bg-gradient-to-br ${caseStudy.color} opacity-10`} />
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:50px_50px]" />
         <div className="absolute inset-0 bg-noise opacity-20" />
