@@ -417,13 +417,13 @@ export default function Home() {
               <div className="relative aspect-square max-w-md mx-auto md:mx-0">
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-600/20 to-violet-600/20 blur-3xl" />
                 <div className="relative h-full w-full rounded-3xl overflow-hidden border border-gray-800">
-                  {/* Replace with a professional photo from your deck */}
                   <Image
-                    src="/placeholder.svg?height=600&width=600"
-                    alt="Neil Sethi"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250417_1449_Serene%20Vintage%20Introspection_simple_compose_01js2vn2t0fxksrk781n3az7h9.gif-gytUJ37QVbLTTwiViC83Ej8FQO040j.jpeg"
+                    alt="Neil Sethi seated in a warm vintage-style portrait"
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    loading="lazy"
                     className="object-cover"
-                    priority
                   />
                 </div>
                 <motion.div
