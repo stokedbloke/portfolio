@@ -433,7 +433,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-600 to-violet-600 rounded-2xl p-4 shadow-xl"
                 >
-                  <p className="text-white font-bold text-xl">10+ Years</p>
+                  <p className="text-white font-bold text-xl">15+ Years</p>
                   <p className="text-white/80 text-sm">Digital Health Experience</p>
                 </motion.div>
               </div>
@@ -483,7 +483,7 @@ export default function Home() {
                       </motion.div>
                     </div>
                     <p className="leading-relaxed">
-                      With over a decade of experience in digital health, I've led the development of innovative
+                      With over 15 years of experience in digital health, I've led the development of innovative
                       products that have transformed patient care, reduced costs, and improved outcomes across multiple
                       healthcare domains.
                     </p>
