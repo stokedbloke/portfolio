@@ -42,6 +42,7 @@ export default function Home() {
 
   const heroOpacity = useTransform(smoothScrollYProgress, [0, 0.1], [1, 0])
   const heroScale = useTransform(smoothScrollYProgress, [0, 0.1], [1, 0.9])
+  const aboutImageY = useTransform(smoothScrollYProgress, [0.1, 0.35], [28, -18])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -391,10 +392,10 @@ export default function Home() {
 
         {/* Marquee Section */}
         <section className="py-12 bg-gray-950 overflow-hidden border-t border-b border-gray-800">
-          <ParallaxText baseVelocity={-3}>
+          <ParallaxText baseVelocity={-0.8}>
             DIGITAL HEALTH • PRODUCT LEADERSHIP • HEALTHCARE INNOVATION • USER-CENTERED DESIGN •
           </ParallaxText>
-          <ParallaxText baseVelocity={3}>
+          <ParallaxText baseVelocity={0.8}>
             DATA ANALYTICS • BEHAVIORAL HEALTH • PREVENTATIVE CARE • TELEHEALTH •
           </ParallaxText>
         </section>
@@ -414,7 +415,10 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="grid md:grid-cols-2 gap-12 items-center"
             >
-              <div className="relative aspect-square max-w-md mx-auto md:mx-0">
+              <motion.div
+                style={{ y: aboutImageY }}
+                className="relative aspect-square max-w-md mx-auto md:mx-0"
+              >
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-600/20 to-violet-600/20 blur-3xl" />
                 <div className="relative h-full w-full rounded-3xl overflow-hidden border border-gray-800">
                   <Image
@@ -436,7 +440,7 @@ export default function Home() {
                   <p className="text-white font-bold text-xl">15+ Years</p>
                   <p className="text-white/80 text-sm">Digital Health Experience</p>
                 </motion.div>
-              </div>
+              </motion.div>
               <div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -570,7 +574,7 @@ export default function Home() {
               className="mt-20 text-center"
             >
               <a
-                href="/resume.pdf"
+                href="https://blobs.vusercontent.net/blob/Neil%20Sethi%20%2810%29-LYAzPlwKzzJlEMmIZ5HoObanLiJvjb.pdf"
                 target="_blank"
                 className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                 rel="noreferrer"
