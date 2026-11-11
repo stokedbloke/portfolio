@@ -4,27 +4,50 @@
 
 @layer base {
   :root {
-    /* shadcn tokens, kept for components/ui */
-    --background: 48 23% 97%;
-    --foreground: 223 14% 10%;
+    --background: 40 33% 98%;
+    --foreground: 224 28% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 223 14% 10%;
+    --card-foreground: 224 28% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 223 14% 10%;
-    --primary: 226 71% 40%;
+    --popover-foreground: 224 28% 10%;
+    --primary: 232 78% 52%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 45 14% 93%;
-    --secondary-foreground: 223 14% 10%;
-    --muted: 45 14% 93%;
-    --muted-foreground: 219 10% 38%;
-    --accent: 45 14% 93%;
-    --accent-foreground: 223 14% 10%;
+    --secondary: 225 25% 94%;
+    --secondary-foreground: 224 28% 10%;
+    --muted: 225 25% 94%;
+    --muted-foreground: 222 12% 36%;
+    --accent: 225 25% 94%;
+    --accent-foreground: 224 28% 10%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 45 13% 87%;
-    --input: 45 13% 87%;
-    --ring: 226 71% 40%;
-    --radius: 0.5rem;
+    --border: 225 18% 86%;
+    --input: 225 18% 86%;
+    --ring: 232 78% 52%;
+    --radius: 0.75rem;
+    --glow: 232 90% 60%;
+  }
+
+  .dark {
+    --background: 226 39% 6%;
+    --foreground: 220 30% 96%;
+    --card: 226 32% 10%;
+    --card-foreground: 220 30% 96%;
+    --popover: 226 32% 10%;
+    --popover-foreground: 220 30% 96%;
+    --primary: 224 100% 74%;
+    --primary-foreground: 226 39% 6%;
+    --secondary: 226 26% 15%;
+    --secondary-foreground: 220 30% 96%;
+    --muted: 226 26% 15%;
+    --muted-foreground: 220 16% 72%;
+    --accent: 226 26% 15%;
+    --accent-foreground: 220 30% 96%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 226 22% 20%;
+    --input: 226 22% 20%;
+    --ring: 224 100% 74%;
+    --glow: 250 95% 66%;
   }
 
   * {
@@ -48,12 +71,48 @@
 
   a:focus-visible,
   button:focus-visible {
-    @apply outline outline-2 outline-offset-2 outline-primary rounded-sm;
+    @apply rounded-sm outline outline-2 outline-offset-2 outline-primary;
   }
 }
 
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-violet-400;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:from-blue-500 hover:to-violet-500 hover:shadow-violet-600/30;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-card/60 px-6 py-3 text-sm font-semibold transition hover:border-primary hover:text-primary;
+  }
+  .text-link {
+    @apply font-medium text-primary underline decoration-primary/40 underline-offset-4 transition hover:decoration-primary;
+  }
+  .card-hover {
+    @apply transition duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-xl hover:shadow-[hsl(var(--glow)/0.15)];
+  }
+  /* Hero backdrop: soft colour wash over a faint grid. */
+  .hero-backdrop {
+    background-image: radial-gradient(60% 70% at 75% 20%, hsl(var(--glow) / 0.22), transparent 70%),
+      radial-gradient(45% 55% at 10% 90%, hsl(210 100% 55% / 0.14), transparent 70%),
+      linear-gradient(hsl(var(--foreground) / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--foreground) / 0.035) 1px, transparent 1px);
+    background-size: auto, auto, 48px 48px, 48px 48px;
+  }
+}
+
+/* Scroll-in reveal. Content is visible by default; motion only when allowed. */
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
   }
 }

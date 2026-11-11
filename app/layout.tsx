@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   },
 }
 
+// Runs before paint: dark by default, light only if the visitor chose it.
+const themeScript = `try{var d=document.documentElement;d.classList.add('js');if(localStorage.getItem('theme')==='light')d.classList.remove('dark')}catch(e){}`
+
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -41,7 +44,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className={`${inter.variable} ${manrope.variable} font-sans`}>
         <a
           href="#main"

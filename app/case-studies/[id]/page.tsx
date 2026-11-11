@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   }
 }
 
-const textLink = "font-medium text-primary underline underline-offset-4 hover:no-underline"
+const textLink = "text-link"
 
 export default async function CaseStudyPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -41,7 +41,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ id: 
       </p>
 
       <header className="mt-6">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm font-medium text-primary">
           {c.company} · {c.period}
         </p>
         <h1 className="mt-2 text-3xl font-extrabold leading-tight tracking-tight md:text-4xl">{c.title}</h1>
@@ -62,14 +62,14 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ id: 
           alt={c.imageAlt ?? ""}
           width={1200}
           height={675}
-          className="mt-8 aspect-video w-full rounded-lg border object-cover"
+          className="mt-8 aspect-video w-full rounded-2xl border object-cover"
         />
       )}
 
       <div className="mt-10 space-y-8">
         {c.sections.map((s) => (
           <section key={s.heading}>
-            <h2 className="text-xl font-bold">{s.heading}</h2>
+            <h2 className="text-xl font-bold text-gradient inline-block">{s.heading}</h2>
             {s.paragraphs?.map((p) => (
               <p key={p} className="mt-3 leading-relaxed">
                 {p}
@@ -94,7 +94,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ id: 
               {c.figures.map((f) => (
                 <div key={f.label} className="rounded-lg border bg-card p-4">
                   <dt className="text-sm text-muted-foreground">{f.label}</dt>
-                  <dd className="mt-1 text-2xl font-bold">{f.value}</dd>
+                  <dd className="mt-1 text-3xl font-extrabold text-gradient">{f.value}</dd>
                 </div>
               ))}
             </dl>

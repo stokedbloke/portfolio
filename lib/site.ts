@@ -60,6 +60,8 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "I led product for the tools ABA clinicians use to document sessions, build treatment plans and write reports.",
     evidence: "Reports that took two hours now take less than an hour.",
+    image: "/images/case-studies/behavioral-health.jpg",
+    imageAlt: "Clinician scheduling and session screens",
     sections: [
       {
         heading: "Problem",
@@ -126,7 +128,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "What changed",
         paragraphs: [
           "I qualified and mentored startups so they could launch secure, compliant apps in weeks rather than months.",
-          "I use the same agent-first approach in my own projects. See “How I build” on the homepage.",
+          "I use the same agent-first approach in my own projects. See the projects on the homepage.",
         ],
       },
     ],
@@ -323,23 +325,37 @@ export const getCase = (id: string) => caseStudies.find((c) => c.id === id)
 export const projects = [
   {
     name: "GiggleGauge",
+    tagline: "Track your laughter, measure your joy.",
     href: "https://gigglegauge.com",
     note: "Account required",
-    text: "A laughter tracker. It finds laughter in audio from a wearable and shows a daily count. It works with Omi devices and has an MCP endpoint, so an AI agent can query your data.",
+    image: "/images/projects/gigglegauge.png",
+    imageAlt: "GiggleGauge home page with a daily count of 18 giggles",
+    imageFit: "cover",
+    text: "The Fitbit for laughs. GiggleGauge uses AI to detect and count laughter from your voice, helping you notice and revisit the unplanned moments of joy already happening in your life. It works with Omi wearables, connects AI assistants like Claude to your laughter data, and can press your family’s greatest hits onto a vinyl record.",
   },
   {
     name: "VocalMirror",
+    tagline: "Release your inner monologue.",
     href: "https://vocalmirror.io",
     note: "",
-    text: "A voice reflection app. You talk through what is on your mind. It reflects back what you said, in the first person and without judgment.",
+    image: "/images/projects/vocalmirror.png",
+    imageAlt: "VocalMirror logo: a speech bubble and its reflection",
+    imageFit: "contain",
+    text: "Talk it through and hear it reflected back. I use it for offloading rumination to be more present with people I love, for rehearsals before presentations, interviews or hard conversations, and for quick debriefs after classes, podcasts or meetings.",
   },
   {
     name: "Percipience",
+    tagline: "A contemplative mirror.",
     href: "https://percipience.live",
     note: "",
-    text: "An interactive view of my task cycles, heart-rate variability and laugh counts, shown against the positions of the planets.",
+    image: "/images/projects/percipience.png",
+    imageAlt: "Percipience sky view with the Sun and Moon, a timeline and playback controls",
+    imageFit: "cover",
+    text: "A little model universe. It sets my productivity cycles, heart-rate variability and laugh counts against the Sun, Moon and planets. It gives a feeling of alignment, not a score. The app confirms rather than informs.",
   },
 ]
+
+export const traits = ["An analytical storyteller", "A computer scientist", "A culture influencer", "An empathetic leader"]
 
 export const experience = [
   { org: "1health (Tachin.AI)", role: "Director of Platform Product and Partnerships", period: "Jan 2026 – present" },
