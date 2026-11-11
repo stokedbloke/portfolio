@@ -5,6 +5,7 @@
 Contact: neil@percipience.live
 LinkedIn: https://www.linkedin.com/in/sethineil/
 Résumé (PDF): https://neil.percipience.live/neil-sethi-resume.pdf
+Résumé (Markdown): https://neil.percipience.live/resume.md
 
 ## Selected work
 

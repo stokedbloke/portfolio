@@ -26,6 +26,11 @@ export function Footer() {
               Résumé
             </a>
           </li>
+          <li>
+            <a className="hover:text-foreground" href="/llms.txt">
+              For AI agents
+            </a>
+          </li>
         </ul>
       </div>
     </footer>

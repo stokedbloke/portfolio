@@ -9,6 +9,7 @@ export const site = {
     "Selected work in clinical workflows, at-home care and healthcare developer tools.",
   email: "neil@percipience.live",
   linkedin: "https://www.linkedin.com/in/sethineil/",
+  recommendations: "https://www.linkedin.com/in/sethineil/details/recommendations/",
   github: "https://github.com/stokedbloke",
   resume: "/neil-sethi-resume.pdf",
   headshot: "/images/neil-sethi.jpg",

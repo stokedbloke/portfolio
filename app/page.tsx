@@ -260,7 +260,7 @@ export default function Home() {
           </div>
           <p className="mt-6 text-sm text-muted-foreground">
             More on{" "}
-            <a href={`${site.linkedin}details/recommendations/`} className="text-link">
+            <a href={site.recommendations} className="text-link">
               LinkedIn
             </a>
             .
