@@ -6,13 +6,12 @@ export const site = {
   url: "https://neil.percipience.live",
   title: "Neil Sethi | Healthcare Product Lead",
   description:
-    "Healthcare software for clinicians and patients: clinical workflows, at-home care, and healthcare developer tools.",
+    "Selected work in clinical workflows, at-home care and healthcare developer tools.",
   email: "neil@percipience.live",
   linkedin: "https://www.linkedin.com/in/sethineil/",
   github: "https://github.com/stokedbloke",
   resume: "/neil-sethi-resume.pdf",
-  headshot:
-    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neil%20LI-uLVJtMbHOWra8j9WOQ8DpAwj0pb6nD.jpeg",
+  headshot: "/images/neil-sethi.jpg",
 }
 
 export type Figure = { value: string; label: string }
@@ -182,13 +181,13 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "preventative-care",
-    title: "Wearables, coaching and sleep",
+    title: "HealthBridge and sleep monitoring",
     company: "Sutter Health, Design & Innovation",
     role: "Director of Business Design, Product Management",
     period: "Jul 2019 – Aug 2021",
     summary:
-      "I worked with clinicians and engineers on HealthBridge and a sleep program built on wearables and health coaches.",
-    evidence: "90% engagement across hundreds of HealthBridge users.",
+      "I launched HealthBridge, a preventative care platform that pairs wearables with health coaches. Its first program was direct-to-consumer sleep monitoring.",
+    evidence: "HealthBridge reached 90% engagement.",
     image: "/images/case-studies/preventative-care.jpg",
     imageAlt: "Sutter Health sleep monitoring and education program page",
     sections: [
@@ -345,13 +344,13 @@ export const projects = [
   },
   {
     name: "Percipience",
-    tagline: "A contemplative mirror.",
+    tagline: "Calibrate inner state against cosmic rhythm.",
     href: "https://percipience.live",
     note: "",
     image: "/images/projects/percipience.png",
     imageAlt: "Percipience sky view with the Sun and Moon, a timeline and playback controls",
     imageFit: "cover",
-    text: "A little model universe. It sets my productivity cycles, heart-rate variability and laugh counts against the Sun, Moon and planets. It gives a feeling of alignment, not a score. The app confirms rather than informs.",
+    text: "A personal cosmic self-awareness tool. It shows my Sethi Spirals (सेठी सर्पिल), fortnightly work cycles that follow the Moon, with heart-rate variability from Oura and laugh counts from GiggleGauge, against the Sun, Moon and inner planets. I open it once a day. Not a number, not a score. A feeling: alignment or delta. Drag the scrubber to travel back through past spirals.",
   },
 ]
 

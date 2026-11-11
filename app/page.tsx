@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, ArrowUpRight } from "lucide-react"
+import { PortraitVideo } from "@/components/portrait-video"
 import { Reveal } from "@/components/reveal"
 import { earlierIds, experience, featuredIds, getCase, projects, quotes, site, traits } from "@/lib/site"
 
@@ -187,13 +188,16 @@ export default function Home() {
               Who is <span className="text-gradient">Neil?</span>
             </h2>
           </Reveal>
-          <div className="mt-8 grid gap-10 md:grid-cols-5">
-            <Reveal className="md:col-span-3">
+          <div className="mt-8 grid gap-10 md:grid-cols-12">
+            <Reveal className="mx-auto w-full max-w-xs md:col-span-3 md:max-w-none">
+              <PortraitVideo />
+            </Reveal>
+            <Reveal className="md:col-span-5">
               <div className="space-y-4 text-lg leading-relaxed">
                 <p>
                   I’m a product lead and former engineer in the Bay Area. I started as a software engineer at Qualcomm.
-                  For 15 years I have built products that clinicians and patients use directly, across behavioral
-                  health, musculoskeletal care and preventative medicine.
+                  For 15 years I have worked in digital health, across behavioral health, musculoskeletal care and
+                  preventative medicine.
                 </p>
                 <p className="text-muted-foreground">
                   This year I built agent-facing developer tools at 1health. Outside work I build my own products with
@@ -211,7 +215,7 @@ export default function Home() {
                 ))}
               </ul>
             </Reveal>
-            <Reveal className="md:col-span-2">
+            <Reveal className="md:col-span-4">
               <ul className="divide-y rounded-2xl border bg-card px-5">
                 {experience.map((e) => (
                   <li key={e.org + e.period} className="py-3">
@@ -272,7 +276,7 @@ export default function Home() {
               Get in <span className="text-gradient">touch</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              If you’re building for care teams or patients, I’d like to hear what you’re working on.
+              If you’re building in healthcare, I’d like to hear what you’re working on.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a href={`mailto:${site.email}`} className="btn-primary">
