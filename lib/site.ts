@@ -344,13 +344,13 @@ export const projects = [
   },
   {
     name: "Percipience",
-    tagline: "Calibrate inner state against cosmic rhythm.",
+    tagline: "Atman and Brahman, in one view.",
     href: "https://percipience.live",
     note: "",
     image: "/images/projects/percipience.png",
     imageAlt: "Percipience sky view with the Sun and Moon, a timeline and playback controls",
     imageFit: "cover",
-    text: "A personal cosmic self-awareness tool. It shows my Sethi Spirals (सेठी सर्पिल), fortnightly work cycles that follow the Moon, with heart-rate variability from Oura and laugh counts from GiggleGauge, against the Sun, Moon and inner planets. I open it once a day. Not a number, not a score. A feeling: alignment or delta. Drag the scrubber to travel back through past spirals.",
+    text: "Percipience aligns the cosmic, universal truths, or Brahman, with the internal truths, or Atman. In an embodied sense the two are indistinguishable. This is a reminder of that as we spiral through the moon cycles, the Milky Way and our personal journeys. It sets my fortnightly work cycles, heart-rate variability and laugh counts against the Sun, Moon and inner planets.",
   },
 ]
 
