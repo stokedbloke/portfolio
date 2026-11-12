@@ -119,7 +119,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "The problem",
         paragraphs: [
           "Every team building a clinical product hits the same wall: eligibility screening, CLIA lab ordering, medical-director oversight, results delivery and chain of custody. Building it yourself takes months to years and a team of hires, and none of it differentiates the product.",
-          "There is a second, newer problem. Much of the integration work is now done by AI coding agents. They can work from documentation written for humans, but less efficiently. Agents are becoming primary customers of the platform, and they need a front door designed for them.",
+          "There is a second, newer problem. Much of the integration work is now done by AI coding agents. Agents are becoming primary customers of the platform, and they need a front door designed for them.",
         ],
       },
       {
