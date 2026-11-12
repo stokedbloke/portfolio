@@ -278,7 +278,7 @@ export default function Home() {
               Get in <span className="text-gradient">touch</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              If you’re building in healthcare, I’d like to hear what you’re working on.
+              If you’re building in healthcare, I’d like to help you get to market quickly.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a href={`mailto:${site.email}`} className="btn-primary">
