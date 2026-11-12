@@ -16,7 +16,12 @@ export const site = {
 }
 
 export type Figure = { value: string; label: string }
-export type Section = { heading: string; paragraphs?: string[]; bullets?: string[] }
+export type Section = {
+  heading: string
+  paragraphs?: string[]
+  bullets?: string[]
+  links?: { href: string; label: string }[]
+}
 export type Quote = { text: string; name: string; title: string }
 
 export type CaseStudy = {
@@ -95,40 +100,54 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "healthcare-developer-platform",
-    title: "Developer portal and MCP Explorer",
+    title: "The platform behind new clinical products",
     company: "1health (Tachin.AI)",
     role: "Director of Platform Product and Partnerships",
     period: "Jan 2026 – present",
     summary:
-      "I build the tools developers and AI agents use to find and call 1health's healthcare APIs.",
-    evidence: "Live at dev.1health.io.",
+      "Every new clinical product needs the same regulated infrastructure: patient data, lab ordering, eligibility and compliance. I built 1health's developer-facing products: the portal, Patient Vault (a headless API over 2.7M patient records) and MCP tooling that lets AI coding agents discover and call the APIs directly.",
+    evidence: "Muse Bio went from Google Forms, spreadsheets and paper to a live donor program in about a month.",
     link: { href: "https://dev.1health.io", label: "Visit the developer portal" },
     sections: [
       {
-        heading: "Problem",
+        heading: "Overview",
         paragraphs: [
-          "A team building a healthcare app has to work out which API to call and what their app must supply. Much of that work is now done by coding agents. Agents need documentation they can read and tools they can call.",
+          "1health is a HIPAA-compliant, SOC 2 Type II platform that healthcare products are built on. I own the developer-facing side: how engineers, and increasingly their AI coding agents, discover, understand and call the platform's APIs.",
         ],
       },
       {
-        heading: "My role",
+        heading: "The problem",
         paragraphs: [
-          "I own platform product and partnerships. I work with engineering on the API surface and with the startups and enterprises that build on it.",
+          "Every team building a clinical product hits the same wall: eligibility screening, CLIA lab ordering, medical-director oversight, results delivery and chain of custody. Building it yourself takes months to years and a team of hires, and none of it differentiates the product.",
+          "There is a second, newer problem. Much of the integration work is now done by AI coding agents, and they cannot use documentation written only for humans.",
         ],
       },
       {
-        heading: "What we shipped",
+        heading: "What I built",
         bullets: [
-          "The developer portal and MCP Explorer, which expose compliant healthcare APIs to engineers and AI agents.",
-          "Patient Vault, the headless patient data API over the secure data layer holding 2.7M patient records.",
+          "The developer portal at dev.1health.io.",
+          "Agent-readable documentation, and MCP tooling that lets a coding agent find the right endpoint and call it directly.",
+          "Patient Vault, a headless patient data API over the secure data layer holding 2.7M patient records.",
           "Lab ordering through national lab networks for startup and enterprise build partners.",
         ],
       },
       {
-        heading: "What changed",
+        heading: "The product bet",
         paragraphs: [
-          "I qualified and mentored startups so they could launch secure, compliant apps in weeks rather than months.",
-          "I use the same agent-first approach in my own projects. See the projects on the homepage.",
+          "I treated AI agents as first-class users of the platform, not an add-on. Documentation is designed to be read by a model, APIs are designed to be discovered by one, and the portal serves both audiences from the same source.",
+          "I run this site the same way. See /llms.txt.",
+        ],
+      },
+      {
+        heading: "What happened",
+        paragraphs: [
+          "Partners ship compliant products in weeks rather than months.",
+          "Muse Bio, a regenerative medicine company working with stem cells, ran its donor program on Google Forms, spreadsheets and paper, out of one San Francisco clinic. It launched an automated program in about a month: eligibility and consent, lab orders, physician approval, specimen tracking and results. The program is now ready to scale nationwide. Their COO said that without 1health they would probably have needed to hire 10 people.",
+          "Expert-Dx, a diagnostic consultation service for physicians with hard lab cases, led by Dr. Michael Laposata, went live in about a month. Getting from decision to a usable product normally takes about twelve.",
+        ],
+        links: [
+          { href: "https://dev.1health.io/case-studies/muse-bio", label: "Muse Bio case study" },
+          { href: "https://dev.1health.io/case-studies/expert-dx", label: "Expert-Dx case study" },
         ],
       },
     ],

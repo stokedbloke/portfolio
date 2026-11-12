@@ -24,7 +24,8 @@ export default function Home() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               I led product for ABA treatment planning and reporting at Xolv. I co-founded SpineZone and took its back
-              and neck program online. At 1health I build developer tools for healthcare APIs.
+              and neck program online. At 1health I build the platform layer that new clinical products are built on:
+              patient data, lab ordering and compliant APIs designed for engineers and AI agents.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="/#portfolio" className="btn-primary group">
@@ -88,10 +89,10 @@ export default function Home() {
                           className="flex h-full w-full flex-col justify-center gap-2 bg-gradient-to-br from-blue-700 via-indigo-700 to-violet-800 p-8 font-mono text-sm text-white/90"
                           aria-hidden
                         >
-                          <span className="text-white/60">$ agent, which API do I need?</span>
-                          <span>→ dev.1health.io</span>
-                          <span>→ MCP Explorer</span>
-                          <span>→ Patient Vault · lab ordering</span>
+                          <span className="text-white/60">$ agent, launch a compliant lab program</span>
+                          <span>→ dev.1health.io · MCP</span>
+                          <span>→ Patient Vault · eligibility</span>
+                          <span>→ lab ordering · results</span>
                         </div>
                       )}
                       <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent" aria-hidden />
@@ -200,7 +201,8 @@ export default function Home() {
                   preventative medicine.
                 </p>
                 <p className="text-muted-foreground">
-                  This year I built agent-facing developer tools at 1health. Outside work I build my own products with
+                  At 1health I build the platform that new clinical products launch on, designed for engineers and AI
+                  agents. Outside work I build my own products with
                   voice, audio and wearables.
                 </p>
               </div>

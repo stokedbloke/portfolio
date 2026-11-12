@@ -82,6 +82,15 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ id: 
                 ))}
               </ul>
             )}
+            {s.links && (
+              <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                {s.links.map((l) => (
+                  <a key={l.href} href={l.href} className={`${textLink} inline-flex items-center gap-1`}>
+                    {l.label} <ArrowUpRight className="h-4 w-4" aria-hidden />
+                  </a>
+                ))}
+              </p>
+            )}
           </section>
         ))}
 
