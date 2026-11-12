@@ -119,7 +119,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "The problem",
         paragraphs: [
           "Every team building a clinical product hits the same wall: eligibility screening, CLIA lab ordering, medical-director oversight, results delivery and chain of custody. Building it yourself takes months to years and a team of hires, and none of it differentiates the product.",
-          "There is a second, newer problem. Much of the integration work is now done by AI coding agents, and they cannot use documentation written only for humans.",
+          "There is a second, newer problem. Much of the integration work is now done by AI coding agents. They can work from documentation written for humans, but less efficiently. Agents are becoming primary customers of the platform, and they need a front door designed for them.",
         ],
       },
       {
@@ -135,8 +135,9 @@ export const caseStudies: CaseStudy[] = [
         heading: "The product bet",
         paragraphs: [
           "I treated AI agents as first-class users of the platform, not an add-on. Documentation is designed to be read by a model, APIs are designed to be discovered by one, and the portal serves both audiences from the same source.",
-          "I run this site the same way. See /llms.txt.",
+          "I run this site the same way.",
         ],
+        links: [{ href: "/llms.txt", label: "See /llms.txt" }],
       },
       {
         heading: "What happened",

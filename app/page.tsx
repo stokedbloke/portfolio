@@ -24,7 +24,7 @@ export default function Home() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               I led product for ABA treatment planning and reporting at Xolv. I co-founded SpineZone and took its back
-              and neck program online. At 1health I build the platform layer that new clinical products are built on:
+              and neck program online. At 1health I build the secure data layer that new clinical products are built on:
               patient data, lab ordering and compliant APIs designed for engineers and AI agents.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -201,8 +201,8 @@ export default function Home() {
                   preventative medicine.
                 </p>
                 <p className="text-muted-foreground">
-                  At 1health I build the platform that new clinical products launch on, designed for engineers and AI
-                  agents. Outside work I build my own products with
+                  At 1health I build the secure data layer that new clinical products launch on, designed for engineers
+                  and AI agents. Outside work I build my own products with
                   voice, audio and wearables.
                 </p>
               </div>
